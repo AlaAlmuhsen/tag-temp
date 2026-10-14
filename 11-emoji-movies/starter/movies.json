@@ -1,0 +1,100 @@
+{
+  "puzzles": [
+    {
+      "emojis": "🦁👑🌅",
+      "options": ["Madagascar", "The Lion King", "The Jungle Book", "Tarzan"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "emojis": "🚢🧊💔",
+      "options": ["Titanic", "Pirates of the Caribbean", "Jaws", "Life of Pi"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "emojis": "🐠🔍🌊",
+      "options": ["Shark Tale", "Moana", "The Little Mermaid", "Finding Nemo"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "emojis": "❄️👸⛄",
+      "options": ["Tangled", "Brave", "Frozen", "Cinderella"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "emojis": "🧸🤠🚀",
+      "options": ["Toy Story", "Cars", "Monsters, Inc.", "Wall-E"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "emojis": "🦖🏝️🧬",
+      "options": ["King Kong", "Godzilla", "Jurassic Park", "The Lost World"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "emojis": "🕷️🧑🏙️",
+      "options": ["Batman", "Spider-Man", "Ant-Man", "Venom"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "emojis": "👽📞🏠",
+      "options": ["Men in Black", "Independence Day", "Arrival", "E.T."],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "emojis": "👻👻🔫",
+      "options": ["Casper", "Ghostbusters", "The Others", "Beetlejuice"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "emojis": "🦈🏖️🩸",
+      "options": ["The Meg", "Deep Blue Sea", "Jaws", "Finding Dory"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "emojis": "🐀👨‍🍳🇫🇷",
+      "options": ["Ratatouille", "Chef", "Stuart Little", "Cloudy with a Chance of Meatballs"],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "emojis": "🧙‍♂️💍🌋",
+      "options": ["Harry Potter", "The Hobbit", "Narnia", "The Lord of the Rings"],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "emojis": "🏃‍♂️🍫🪶",
+      "options": ["Rain Man", "Forrest Gump", "Cast Away", "The Green Mile"],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "emojis": "🕶️💊🐇",
+      "options": ["The Matrix", "Alice in Wonderland", "Men in Black", "Blade Runner"],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "emojis": "🏠🎈👴",
+      "options": ["Gran Torino", "Coco", "Up", "Home Alone"],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "emojis": "🌀💤🔝",
+      "options": ["Interstellar", "Tenet", "Shutter Island", "Inception"],
+      "correctOption": 3,
+      "points": 30
+    }
+  ]
+}

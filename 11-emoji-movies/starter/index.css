@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+:root {
+  --color-darkest: #1a1423;
+  --color-dark: #372549;
+  --color-medium: #b8a9c9;
+  --color-light: #f5f0fa;
+
+  --color-theme: #e5b80b;
+  --color-accent: #e63946;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-light);
+  background-color: var(--color-darkest);
+  background-image: radial-gradient(
+    circle at top,
+    #2c1f3d 0%,
+    var(--color-darkest) 60%
+  );
+  padding: 3.2rem;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  width: 50rem;
+}
+
+/* ---------- HEADER ---------- */
+.app-header {
+  width: 66rem;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header .logo {
+  font-size: 9.6rem;
+  line-height: 1;
+}
+
+h1 {
+  font-family: "Monoton", cursive;
+  font-weight: 400;
+  font-size: 5.6rem;
+  color: var(--color-theme);
+  text-shadow: 0 0 1.6rem rgba(229, 184, 11, 0.4);
+}
+
+h2 {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  color: var(--color-medium);
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+  color: var(--color-medium);
+  text-align: center;
+}
+
+/* ---------- ERROR ---------- */
+.error {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 2rem;
+  background-color: var(--color-dark);
+  border-radius: 100px;
+}
+
+/* ---------- START SCREEN ---------- */
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.start .popcorn {
+  font-size: 6.4rem;
+  margin-bottom: 1.6rem;
+}
+
+/* ---------- PROGRESS ---------- */
+.progress {
+  margin-bottom: 4rem;
+  display: grid;
+  justify-content: space-between;
+  gap: 1.2rem;
+  grid-template-columns: auto auto;
+  font-size: 1.8rem;
+  color: var(--color-medium);
+}
+
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 12px;
+  grid-column: 1 / -1;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--color-dark);
+}
+
+::-webkit-progress-bar {
+  background-color: var(--color-dark);
+  border-radius: 100px;
+}
+::-webkit-progress-value {
+  background-color: var(--color-theme);
+  border-radius: 100px;
+}
+::-moz-progress-bar {
+  background-color: var(--color-theme);
+  border-radius: 100px;
+}
+
+/* ---------- PUZZLE ---------- */
+.puzzle {
+  margin-bottom: 3.2rem;
+}
+
+.emojis {
+  font-size: 7.2rem;
+  letter-spacing: 1.2rem;
+  text-align: center;
+  padding: 3.2rem 0;
+  margin-bottom: 1.6rem;
+  background-color: var(--color-dark);
+  border: 3px dashed var(--color-theme);
+  border-radius: 2.4rem;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: block;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+.btn:not([disabled]):hover {
+  background-color: var(--color-darkest);
+  border-color: var(--color-theme);
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+}
+
+.btn-ui {
+  float: right;
+  background-color: var(--color-theme);
+  border-color: var(--color-theme);
+  color: var(--color-darkest);
+  font-weight: 700;
+}
+
+.btn-ui:not([disabled]):hover {
+  color: var(--color-theme);
+}
+
+/* ---------- OPTIONS ---------- */
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.btn-option {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.btn-option:not([disabled]):hover {
+  transform: translateY(-0.4rem);
+}
+
+.btn-option.correct {
+  background-color: var(--color-theme);
+  border: 2px solid var(--color-theme);
+  color: var(--color-darkest);
+}
+
+.btn-option.wrong {
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  color: var(--color-light);
+  opacity: 0.6;
+}
+
+.answer {
+  transform: scale(1.06);
+  opacity: 1 !important;
+  box-shadow: 0 0 0 4px var(--color-light);
+}
+
+/* ---------- FINISH SCREEN ---------- */
+.result {
+  background-color: var(--color-theme);
+  color: var(--color-darkest);
+  border-radius: 100px;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.result span {
+  font-size: 2.2rem;
+  margin-right: 4px;
+}
+
+.highscore {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 4.8rem;
+  color: var(--color-medium);
+}
+
+/* Separator used by the starter design preview */
+hr {
+  clear: both;
+  border: none;
+  border-top: 2px dashed var(--color-dark);
+  margin: 4.8rem 0;
+}
+
+/* ---------- LOADER ---------- */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 1.6rem;
+
+  color: var(--color-medium);
+  font-size: 1.4rem;
+}
+
+/* A spinning film reel */
+.loader {
+  font-size: 4.8rem;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- TIMER ---------- */
+.timer {
+  float: left;
+  font-size: 1.8rem;
+  color: var(--color-medium);
+  border: 2px solid var(--color-dark);
+  padding: 1.35rem 2.8rem;
+  border-radius: 100px;
+}
+
+/* ********** */
+/* First counter example */
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 6rem;
+}
+
+.counter * {
+  font-size: inherit;
+  padding: 0.8rem;
+}
