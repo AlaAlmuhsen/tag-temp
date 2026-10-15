@@ -1,23 +1,23 @@
-// 🏆 CHALLENGE
 import { Link, Navigate, useSearchParams } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 function ThankYou() {
-  // /thank-you?pet=Luna&adopter=Sara
+  // /thank-you?pet=Luna
   const [searchParams] = useSearchParams();
   const pet = searchParams.get("pet");
-  const adopter = searchParams.get("adopter");
+  const { user } = useAuth();
 
   // Someone typed /thank-you directly → nothing to thank for
-  if (!pet || !adopter) return <Navigate to="/" replace />;
+  if (!pet) return <Navigate to="/" replace />;
 
   return (
     <section className="message-page">
       <p className="big-emoji">🎉</p>
-      <h1>Thank you, {adopter}!</h1>
+      <h1>Thank you, {user.name}!</h1>
       <p>{pet} can't wait to meet you. We'll call you very soon.</p>
       <div className="actions">
-        <Link to="/adoptions" className="btn">
-          See adoptions
+        <Link to="/my-adoptions" className="btn">
+          My adoptions
         </Link>
         <Link to="/pets" className="btn btn-outline">
           See other pets

@@ -5,6 +5,9 @@ function Navbar() {
   //         to the current page's link (already styled in index.css)
   //       → why does the Home link need the `end` prop?
 
+  // TODO: user & logout come from useAuth()
+  //       logout → logout() then navigate("/")
+
   return (
     <nav className="navbar">
       <a href="/" className="logo">
@@ -21,13 +24,22 @@ function Navbar() {
           <a href="/pets">Pets</a>
         </li>
         <li>
-          {/* 🏆 CHALLENGE */}
-          <a href="/adoptions">Adoptions</a>
+          <a href="/my-adoptions">My adoptions</a>
         </li>
         <li>
           <a href="/about">About</a>
         </li>
       </ul>
+
+      {/* DESIGN ONLY: when logged in, show this instead of the button:
+          <div className="nav-user">
+            <span className="avatar">👩</span>
+            <span>Sara</span>
+            <button className="btn btn-outline btn-small">Logout</button>
+          </div> */}
+      <a href="/login" className="btn btn-small">
+        Login
+      </a>
     </nav>
   );
 }

@@ -7,12 +7,13 @@ import Navbar from "./components/Navbar";
 import Loader from "./components/Loader";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Login from "./pages/Login";
 import PetsLayout from "./pages/PetsLayout";
 import PetList from "./pages/PetList";
 import PetDetails from "./pages/PetDetails";
 import AdoptForm from "./pages/AdoptForm";
 import ThankYou from "./pages/ThankYou";
-import Adoptions from "./pages/Adoptions";
+import MyAdoptions from "./pages/MyAdoptions";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -26,6 +27,10 @@ export default function App() {
 
       {/* "/about" */}
       <About />
+      <hr />
+
+      {/* "/login" */}
+      <Login />
       <hr />
 
       {/* "/pets" */}
@@ -44,18 +49,18 @@ export default function App() {
       <Loader />
       <hr />
 
-      {/* 🏆 CHALLENGE "/pets/1/adopt" */}
+      {/* "/pets/1/adopt" (logged in only) */}
       <PetsLayout>
         <AdoptForm />
       </PetsLayout>
       <hr />
 
-      {/* 🏆 CHALLENGE "/thank-you?pet=Luna&adopter=Sara" */}
+      {/* "/thank-you?pet=Luna" (logged in only) */}
       <ThankYou />
       <hr />
 
-      {/* 🏆 CHALLENGE "/adoptions" */}
-      <Adoptions />
+      {/* "/my-adoptions" (logged in only) */}
+      <MyAdoptions />
       <hr />
 
       {/* "*" (any other URL) */}

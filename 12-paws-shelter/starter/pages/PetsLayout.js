@@ -1,6 +1,5 @@
 function PetsLayout({ children }) {
-  // TODO: fetch the pets waiting for a home:
-  //       useFetch(`${API_URL}/pets?adopted=false`)
+  // TODO: pets come from usePets() → count the ones not adopted (derived state)
   const numWaiting = 9;
 
   // TODO: "Surprise me" → pick a random waiting pet and go to its page from code
@@ -16,9 +15,9 @@ function PetsLayout({ children }) {
         <button className="btn">🎲 Surprise me</button>
       </header>
 
-      {/* TODO: this is a LAYOUT shared by /pets and /pets/:petId
-          → make them nested routes of "pets" and replace
-            {children} with <Outlet /> */}
+      {/* TODO: this is a LAYOUT shared by /pets, /pets/:petId and
+          /pets/:petId/adopt → make them nested routes of "pets" and
+          replace {children} with <Outlet /> */}
       {children}
     </section>
   );

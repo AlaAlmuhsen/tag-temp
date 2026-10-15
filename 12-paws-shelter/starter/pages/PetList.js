@@ -2,13 +2,12 @@ import FilterBar from "../components/FilterBar";
 import PetCard from "../components/PetCard";
 
 function PetList() {
-  // TODO: read the type from the URL → useSearchParams()
-  //       then fetch with useFetch(url). json-server filters for you:
-  //         all pets  → `${API_URL}/pets`
-  //         only cats → `${API_URL}/pets?type=cat`
+  // TODO: pets, isLoading and error come from usePets()
   //       isLoading → <Loader />
   //       error     → <Message message={error} />
-  //       no pets   → <Message message="No pets of this type right now 😿" />
+  // TODO: read the type from the URL → useSearchParams()
+  //       and show only the pets of that type
+  //       no pets → <Message message="No pets of this type right now 😿" />
   const pets = [
     { id: 1, name: "Luna", emoji: "🐱", breed: "Tabby", age: 2, adopted: false },
     { id: 2, name: "Max", emoji: "🐶", breed: "Golden Retriever", age: 4, adopted: false },

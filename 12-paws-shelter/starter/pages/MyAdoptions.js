@@ -1,17 +1,17 @@
-// 🏆 CHALLENGE: see CHALLENGE.md
 import { formatDate } from "../utils";
 
-function Adoptions() {
-  // TODO: fetch only adopted pets, newest first:
-  //       useFetch(`${API_URL}/pets?adopted=true&_sort=adoptedAt&_order=desc`)
-  //       none yet → <Message message="No adoptions yet."> + a link to /pets
+function MyAdoptions() {
+  // TODO: only for logged in users → wrap the route in <ProtectedRoute>
+  // TODO: derive MY pets from usePets() + useAuth():
+  //       pets.filter((pet) => pet.adopterId === user.id), newest first
+  //       none yet → <Message message="You haven't adopted anyone yet."> + a link to /pets
   // TODO: each row is a <Link> to the pet's page
-  const pets = [
+  const user = { name: "Omar", avatar: "👨" };
+  const myPets = [
     {
       id: 5,
       name: "Rocky",
       emoji: "🐕",
-      adopter: "Omar",
       reason: "Every old man deserves a good friend",
       adoptedAt: "2026-10-01T10:00:00.000Z",
     },
@@ -19,20 +19,19 @@ function Adoptions() {
 
   return (
     <section className="adoptions">
-      <h1>Adoptions</h1>
-      <p>Pets that found a happy home 🏡</p>
+      <h1>My adoptions</h1>
+      <p>
+        {user.avatar} {user.name}, these friends are coming home with you 🏡
+      </p>
 
       <ul className="adoption-list">
-        {pets.map((pet) => (
+        {myPets.map((pet) => (
           <li key={pet.id}>
             <a href={`/pets/${pet.id}`} className="adoption">
               <div className="emoji">{pet.emoji}</div>
               <div>
                 <h3>{pet.name}</h3>
-                <p className="meta">
-                  Adopted by <strong>{pet.adopter}</strong> on{" "}
-                  {formatDate(pet.adoptedAt)}
-                </p>
+                <p className="meta">Adopted on {formatDate(pet.adoptedAt)}</p>
                 {pet.reason && <p className="reason">"{pet.reason}"</p>}
               </div>
             </a>
@@ -43,4 +42,4 @@ function Adoptions() {
   );
 }
 
-export default Adoptions;
+export default MyAdoptions;

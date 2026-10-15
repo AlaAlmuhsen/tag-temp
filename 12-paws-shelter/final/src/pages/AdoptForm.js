@@ -1,50 +1,37 @@
-// 🏆 CHALLENGE
 import { useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-import { useFetch } from "../hooks/useFetch";
-import { API_URL } from "../utils";
+import { usePets } from "../contexts/PetsContext";
+import { useAuth } from "../contexts/AuthContext";
 import BackButton from "../components/BackButton";
 import Loader from "../components/Loader";
 
 function AdoptForm() {
   const { petId } = useParams();
   const navigate = useNavigate();
-  const { data: pet, isLoading, error } = useFetch(`${API_URL}/pets/${petId}`);
+  const { getPet, adoptPet, isLoading } = usePets();
+  const { user } = useAuth();
 
-  const [adopter, setAdopter] = useState("");
   const [reason, setReason] = useState("");
   const [isSending, setIsSending] = useState(false);
 
   if (isLoading) return <Loader />;
 
-  if (error) return <Navigate to="/pets" replace />;
+  const pet = getPet(petId);
+
+  if (!pet) return <Navigate to="/pets" replace />;
 
   // Already adopted → back to the pet's page
   if (pet.adopted) return <Navigate to={`/pets/${pet.id}`} replace />;
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (!adopter) return;
 
     try {
       setIsSending(true);
-
-      // PATCH → update only these fields of the pet
-      const res = await fetch(`${API_URL}/pets/${pet.id}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          adopted: true,
-          adopter,
-          reason,
-          adoptedAt: new Date().toISOString(),
-        }),
-      });
-      if (!res.ok) throw new Error();
+      await adoptPet(pet.id, user, reason);
 
       // Send data to the next page through the query string
-      const params = new URLSearchParams({ pet: pet.name, adopter });
-      navigate(`/thank-you?${params}`);
+      navigate(`/thank-you?${new URLSearchParams({ pet: pet.name })}`);
     } catch {
       alert("Couldn't send your request 😿 Try again!");
       setIsSending(false);
@@ -57,14 +44,9 @@ function AdoptForm() {
         {pet.emoji} Adopt {pet.name}
       </h2>
 
-      <div className="form-row">
-        <label htmlFor="adopter">Your name</label>
-        <input
-          id="adopter"
-          value={adopter}
-          onChange={(e) => setAdopter(e.target.value)}
-        />
-      </div>
+      <p className="form-hint">
+        Adopting as {user.avatar} <strong>{user.name}</strong>
+      </p>
 
       <div className="form-row">
         <label htmlFor="reason">Why {pet.name}?</label>

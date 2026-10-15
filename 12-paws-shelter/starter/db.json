@@ -54,6 +54,7 @@
       "description": "Rocky is a senior gentleman who just wants a soft bed and someone to walk with.",
       "traits": ["Relaxed", "Loyal", "Senior"],
       "adopted": true,
+      "adopterId": 2,
       "adopter": "Omar",
       "reason": "Every old man deserves a good friend",
       "adoptedAt": "2026-10-01T10:00:00.000Z"

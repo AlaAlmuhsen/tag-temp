@@ -1,14 +1,16 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import { useFetch } from "../hooks/useFetch";
-import { API_URL } from "../utils";
+import { usePets } from "../contexts/PetsContext";
 
 function PetsLayout() {
+  const { pets, isLoading } = usePets();
   const navigate = useNavigate();
-  const { data: waitingPets } = useFetch(`${API_URL}/pets?adopted=false`);
+
+  // Derived state
+  const waitingPets = pets.filter((pet) => !pet.adopted);
 
   // Programmatic navigation: go somewhere from code, not from a <Link>
   function handleSurprise() {
-    if (!waitingPets?.length) return;
+    if (!waitingPets.length) return;
 
     const randomPet =
       waitingPets[Math.floor(Math.random() * waitingPets.length)];
@@ -21,9 +23,9 @@ function PetsLayout() {
         <div>
           <h1>Our pets</h1>
           <p>
-            {waitingPets
-              ? `${waitingPets.length} friends waiting for a home`
-              : "Counting paws..."}
+            {isLoading
+              ? "Counting paws..."
+              : `${waitingPets.length} friends waiting for a home`}
           </p>
         </div>
         <button className="btn" onClick={handleSurprise}>

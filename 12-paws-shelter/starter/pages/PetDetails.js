@@ -3,8 +3,8 @@ import BackButton from "../components/BackButton";
 function PetDetails() {
   // TODO: the id should come from the URL: /pets/:petId
   //       → const { petId } = useParams()
-  //       → fetch it: useFetch(`${API_URL}/pets/${petId}`)
-  //       → /pets/999 doesn't exist (error): redirect with <Navigate to="/pets" replace />
+  //       → getPet(petId) from usePets()
+  //       → /pets/999 doesn't exist: redirect with <Navigate to="/pets" replace />
   const pet = {
     id: 1,
     name: "Luna",
@@ -36,9 +36,10 @@ function PetDetails() {
 
         <div className="actions">
           {/* DESIGN ONLY: when the pet is adopted, show instead:
-              <p className="adopted-note">🏡 Adopted by {pet.adopter}</p> */}
+              <p className="adopted-note">🏡 Adopted by Omar</p>
+              (or "by you" if it's the logged in user's pet) */}
 
-          {/* 🏆 CHALLENGE: link to /pets/:petId/adopt */}
+          {/* TODO: relative <Link to="adopt"> → /pets/:petId/adopt */}
           <a href="#adopt" className="btn">
             Adopt {pet.name}
           </a>

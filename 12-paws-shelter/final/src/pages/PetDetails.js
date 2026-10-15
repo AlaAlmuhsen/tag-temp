@@ -1,18 +1,25 @@
 import { Link, Navigate, useParams } from "react-router-dom";
-import { useFetch } from "../hooks/useFetch";
-import { API_URL } from "../utils";
+import { usePets } from "../contexts/PetsContext";
+import { useAuth } from "../contexts/AuthContext";
 import BackButton from "../components/BackButton";
 import Loader from "../components/Loader";
 
 function PetDetails() {
   // /pets/3 → { petId: "3" }
   const { petId } = useParams();
-  const { data: pet, isLoading, error } = useFetch(`${API_URL}/pets/${petId}`);
+  const { getPet, isLoading } = usePets();
+  const { user } = useAuth();
 
   if (isLoading) return <Loader />;
 
+  const pet = getPet(petId);
+
   // /pets/999 → this pet doesn't exist → redirect
-  if (error) return <Navigate to="/pets" replace />;
+  if (!pet) return <Navigate to="/pets" replace />;
+
+  // Check `user` first: logged out, user?.id is undefined and would match
+  // any pet without an adopterId (undefined === undefined → true!)
+  const isMine = Boolean(user) && pet.adopterId === user.id;
 
   return (
     <article className="pet-details">
@@ -33,9 +40,12 @@ function PetDetails() {
 
         <div className="actions">
           {pet.adopted ? (
-            <p className="adopted-note">🏡 Adopted by {pet.adopter}</p>
+            <p className="adopted-note">
+              🏡 Adopted by {isMine ? "you" : pet.adopter}
+            </p>
           ) : (
-            // 🏆 CHALLENGE: relative link → /pets/3/adopt
+            // Relative link → /pets/3/adopt
+            // (not logged in? ProtectedRoute sends you to /login first)
             <Link to="adopt" className="btn">
               Adopt {pet.name}
             </Link>

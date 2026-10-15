@@ -8,7 +8,11 @@
       "age": 2,
       "breed": "Tabby",
       "description": "Luna is a calm little lady who loves sunny windows and long naps. She will sit on your keyboard while you code.",
-      "traits": ["Calm", "Loves naps", "Indoor"],
+      "traits": [
+        "Calm",
+        "Loves naps",
+        "Indoor"
+      ],
       "adopted": false
     },
     {
@@ -19,7 +23,11 @@
       "age": 4,
       "breed": "Golden Retriever",
       "description": "Max has never met a stranger. He loves fetch, swimming, and stealing socks.",
-      "traits": ["Friendly", "Energetic", "Good with kids"],
+      "traits": [
+        "Friendly",
+        "Energetic",
+        "Good with kids"
+      ],
       "adopted": false
     },
     {
@@ -30,8 +38,16 @@
       "age": 6,
       "breed": "Parrot",
       "description": "Kiwi can say 'hello', 'pizza' and, sadly, the sound of a microwave.",
-      "traits": ["Talkative", "Smart", "Loud"],
-      "adopted": false
+      "traits": [
+        "Talkative",
+        "Smart",
+        "Loud"
+      ],
+      "adopted": true,
+      "adopterId": 1,
+      "adopter": "Sara",
+      "reason": "",
+      "adoptedAt": "2026-10-15T13:29:51.684Z"
     },
     {
       "id": 4,
@@ -41,7 +57,11 @@
       "age": 1,
       "breed": "Holland Lop",
       "description": "Coco has floppy ears and a big appetite for carrots. Does a happy jump called a 'binky'.",
-      "traits": ["Gentle", "Curious", "Quiet"],
+      "traits": [
+        "Gentle",
+        "Curious",
+        "Quiet"
+      ],
       "adopted": false
     },
     {
@@ -52,8 +72,13 @@
       "age": 7,
       "breed": "Mixed",
       "description": "Rocky is a senior gentleman who just wants a soft bed and someone to walk with.",
-      "traits": ["Relaxed", "Loyal", "Senior"],
+      "traits": [
+        "Relaxed",
+        "Loyal",
+        "Senior"
+      ],
       "adopted": true,
+      "adopterId": 2,
       "adopter": "Omar",
       "reason": "Every old man deserves a good friend",
       "adoptedAt": "2026-10-01T10:00:00.000Z"
@@ -66,7 +91,11 @@
       "age": 3,
       "breed": "Black cat",
       "description": "Shadow is shy at first, then follows you from room to room like... a shadow.",
-      "traits": ["Shy", "Sweet", "Indoor"],
+      "traits": [
+        "Shy",
+        "Sweet",
+        "Indoor"
+      ],
       "adopted": false
     },
     {
@@ -77,7 +106,11 @@
       "age": 2,
       "breed": "Canary",
       "description": "Sunny sings every morning at 7am. Free alarm clock included!",
-      "traits": ["Singer", "Cheerful", "Small"],
+      "traits": [
+        "Singer",
+        "Cheerful",
+        "Small"
+      ],
       "adopted": false
     },
     {
@@ -88,7 +121,11 @@
       "age": 3,
       "breed": "Poodle",
       "description": "Bella is fancy, smart and knows 12 tricks. Treats are her love language.",
-      "traits": ["Smart", "Playful", "Hypoallergenic"],
+      "traits": [
+        "Smart",
+        "Playful",
+        "Hypoallergenic"
+      ],
       "adopted": false
     },
     {
@@ -99,7 +136,11 @@
       "age": 2,
       "breed": "Dutch",
       "description": "Oreo is black and white like the cookie, and just as sweet. Loves running around the house.",
-      "traits": ["Active", "Social", "Litter trained"],
+      "traits": [
+        "Active",
+        "Social",
+        "Litter trained"
+      ],
       "adopted": false
     },
     {
@@ -110,7 +151,11 @@
       "age": 5,
       "breed": "Orange cat",
       "description": "Ginger is the boss of the shelter. Will knock things off tables to get your attention.",
-      "traits": ["Bold", "Funny", "Chatty"],
+      "traits": [
+        "Bold",
+        "Funny",
+        "Chatty"
+      ],
       "adopted": false
     }
   ]
