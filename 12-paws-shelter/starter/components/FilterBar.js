@@ -1,4 +1,4 @@
-import { PET_TYPES } from "../data/pets";
+import { PET_TYPES } from "../utils";
 
 function FilterBar() {
   // TODO: the selected type should live in the URL: /pets?type=cat

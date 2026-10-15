@@ -1,11 +1,21 @@
-import { getPet } from "../data/pets";
 import BackButton from "../components/BackButton";
 
 function PetDetails() {
   // TODO: the id should come from the URL: /pets/:petId
   //       → const { petId } = useParams()
-  //       → /pets/999 doesn't exist: redirect with <Navigate to="/pets" replace />
-  const pet = getPet(1);
+  //       → fetch it: useFetch(`${API_URL}/pets/${petId}`)
+  //       → /pets/999 doesn't exist (error): redirect with <Navigate to="/pets" replace />
+  const pet = {
+    id: 1,
+    name: "Luna",
+    emoji: "🐱",
+    breed: "Tabby",
+    age: 2,
+    description:
+      "Luna is a calm little lady who loves sunny windows and long naps. She will sit on your keyboard while you code.",
+    traits: ["Calm", "Loves naps", "Indoor"],
+    adopted: false,
+  };
 
   return (
     <article className="pet-details">
@@ -25,6 +35,9 @@ function PetDetails() {
         </ul>
 
         <div className="actions">
+          {/* DESIGN ONLY: when the pet is adopted, show instead:
+              <p className="adopted-note">🏡 Adopted by {pet.adopter}</p> */}
+
           {/* 🏆 CHALLENGE: link to /pets/:petId/adopt */}
           <a href="#adopt" className="btn">
             Adopt {pet.name}

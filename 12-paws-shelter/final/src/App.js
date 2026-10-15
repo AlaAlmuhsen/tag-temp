@@ -8,6 +8,7 @@ import PetList from "./pages/PetList";
 import PetDetails from "./pages/PetDetails";
 import AdoptForm from "./pages/AdoptForm";
 import ThankYou from "./pages/ThankYou";
+import Adoptions from "./pages/Adoptions";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -37,6 +38,8 @@ export default function App() {
 
           {/* 🏆 CHALLENGE: /thank-you?pet=Luna&adopter=Sara */}
           <Route path="thank-you" element={<ThankYou />} />
+          {/* 🏆 CHALLENGE: every adopted pet */}
+          <Route path="adoptions" element={<Adoptions />} />
 
           {/* Any other URL */}
           <Route path="*" element={<NotFound />} />

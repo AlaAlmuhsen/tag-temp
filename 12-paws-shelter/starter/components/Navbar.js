@@ -21,6 +21,10 @@ function Navbar() {
           <a href="/pets">Pets</a>
         </li>
         <li>
+          {/* 🏆 CHALLENGE */}
+          <a href="/adoptions">Adoptions</a>
+        </li>
+        <li>
           <a href="/about">About</a>
         </li>
       </ul>

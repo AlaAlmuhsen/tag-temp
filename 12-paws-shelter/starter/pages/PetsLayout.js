@@ -1,7 +1,9 @@
-import pets from "../data/pets";
-
 function PetsLayout({ children }) {
-  // TODO: "Surprise me" → pick a random pet and go to its page from code
+  // TODO: fetch the pets waiting for a home:
+  //       useFetch(`${API_URL}/pets?adopted=false`)
+  const numWaiting = 9;
+
+  // TODO: "Surprise me" → pick a random waiting pet and go to its page from code
   //       → const navigate = useNavigate(); navigate(`/pets/${randomPet.id}`)
 
   return (
@@ -9,7 +11,7 @@ function PetsLayout({ children }) {
       <header className="pets-header">
         <div>
           <h1>Our pets</h1>
-          <p>{pets.length} friends waiting for a home</p>
+          <p>{numWaiting} friends waiting for a home</p>
         </div>
         <button className="btn">🎲 Surprise me</button>
       </header>

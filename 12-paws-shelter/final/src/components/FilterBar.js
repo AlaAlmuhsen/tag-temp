@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import { PET_TYPES } from "../data/pets";
+import { PET_TYPES } from "../utils";
 
 function FilterBar() {
   // State that lives in the URL: /pets?type=cat

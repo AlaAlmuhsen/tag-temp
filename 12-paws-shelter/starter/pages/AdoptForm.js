@@ -1,16 +1,19 @@
 // 🏆 CHALLENGE: see CHALLENGE.md
 import { useState } from "react";
-import { getPet } from "../data/pets";
 import BackButton from "../components/BackButton";
 
 function AdoptForm() {
-  // TODO: pet from the URL (useParams)
-  const pet = getPet(1);
+  // TODO: pet from the URL (useParams) + useFetch
+  //       already adopted? → <Navigate to={`/pets/${pet.id}`} replace />
+  const pet = { id: 1, name: "Luna", emoji: "🐱" };
 
   const [adopter, setAdopter] = useState("");
   const [reason, setReason] = useState("");
 
-  // TODO: on submit → navigate to /thank-you?pet=Luna&adopter=Sara
+  // TODO: on submit
+  //   1. PATCH `${API_URL}/pets/${pet.id}`
+  //      body: { adopted: true, adopter, reason, adoptedAt: new Date().toISOString() }
+  //   2. navigate to /thank-you?pet=Luna&adopter=Sara
   return (
     <form className="adopt-form" onSubmit={(e) => e.preventDefault()}>
       <h2>
@@ -37,7 +40,7 @@ function AdoptForm() {
       </div>
 
       <div className="actions">
-        <button className="btn">Send request</button>
+        <button className="btn">Adopt</button>
         <BackButton />
       </div>
     </form>

@@ -18,6 +18,9 @@ function Navbar() {
           <NavLink to="/pets">Pets</NavLink>
         </li>
         <li>
+          <NavLink to="/adoptions">Adoptions</NavLink>
+        </li>
+        <li>
           <NavLink to="/about">About</NavLink>
         </li>
       </ul>

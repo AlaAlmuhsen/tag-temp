@@ -375,6 +375,72 @@ a {
   background-color: var(--color-soft);
 }
 
+.adopted-note {
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  background-color: var(--color-green-soft);
+  color: var(--color-green);
+}
+
+/* ---------- ADOPTIONS ---------- */
+.adoptions h1 {
+  font-size: 4.4rem;
+}
+
+.adoptions > p {
+  color: var(--color-muted);
+  margin-bottom: 3.2rem;
+}
+
+.adoption-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.adoption {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  text-decoration: none;
+  background-color: var(--color-card);
+  border-radius: 2.4rem;
+  padding: 2rem 2.4rem;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
+}
+
+.adoption:hover {
+  transform: translateX(0.6rem);
+}
+
+.adoption .emoji {
+  flex-shrink: 0;
+  font-size: 4rem;
+  width: 7.2rem;
+  height: 7.2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--color-soft);
+}
+
+.adoption h3 {
+  font-size: 2.4rem;
+}
+
+.adoption .meta {
+  font-size: 1.4rem;
+  color: var(--color-muted);
+}
+
+.adoption .reason {
+  font-style: italic;
+  margin-top: 0.4rem;
+}
+
 /* ---------- ADOPT FORM ---------- */
 .adopt-form {
   max-width: 52rem;
@@ -441,6 +507,10 @@ a {
   font-size: 2rem;
   color: var(--color-muted);
   margin-bottom: 3.2rem;
+}
+
+.message-page .actions {
+  justify-content: center;
 }
 
 /* Separator used by the starter design preview */

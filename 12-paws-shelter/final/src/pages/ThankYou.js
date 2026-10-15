@@ -15,9 +15,14 @@ function ThankYou() {
       <p className="big-emoji">🎉</p>
       <h1>Thank you, {adopter}!</h1>
       <p>{pet} can't wait to meet you. We'll call you very soon.</p>
-      <Link to="/pets" className="btn">
-        See other pets
-      </Link>
+      <div className="actions">
+        <Link to="/adoptions" className="btn">
+          See adoptions
+        </Link>
+        <Link to="/pets" className="btn btn-outline">
+          See other pets
+        </Link>
+      </div>
     </section>
   );
 }
