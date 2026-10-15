@@ -8,6 +8,8 @@
   --color-soft: #ffe8d9;
   --color-accent: #ff7a59;
   --color-accent-dark: #e85d3c;
+  --color-green: #1f7a4a;
+  --color-green-soft: #d8f3e3;
 
   --shadow: 0 0.4rem 1.6rem rgba(59, 42, 26, 0.08);
 }
@@ -275,11 +277,50 @@ a {
   color: var(--color-muted);
 }
 
-.empty {
+.pet-card.adopted {
+  opacity: 0.7;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.2rem 1.2rem;
+  border-radius: 100px;
+  background-color: var(--color-green-soft);
+  color: var(--color-green);
+}
+
+/* ---------- LOADER + MESSAGE ---------- */
+.loader {
+  text-align: center;
+  padding: 6rem 0;
+  font-size: 1.8rem;
+  color: var(--color-muted);
+}
+
+.loader span {
+  display: inline-block;
+  font-size: 4.8rem;
+  animation: bounce 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-1.6rem);
+  }
+}
+
+.message {
   text-align: center;
   font-size: 1.8rem;
   color: var(--color-muted);
   padding: 4rem;
+}
+
+.message p {
+  margin-bottom: 2rem;
 }
 
 /* ---------- PET DETAILS ---------- */

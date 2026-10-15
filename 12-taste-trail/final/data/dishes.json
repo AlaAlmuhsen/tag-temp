@@ -1,0 +1,116 @@
+{
+  "dishes": [
+    {
+      "dishName": "Mansaf",
+      "emoji": "🍖",
+      "cityName": "Amman",
+      "country": "Jordan",
+      "flag": "🇯🇴",
+      "date": "2026-01-12T13:00:00.000Z",
+      "notes": "Ate it with my hands like a local. The jameed sauce is unreal 🤤",
+      "position": {
+        "lat": 31.9539,
+        "lng": 35.9106
+      },
+      "id": 1
+    },
+    {
+      "dishName": "Falafel",
+      "emoji": "🧆",
+      "cityName": "Amman",
+      "country": "Jordan",
+      "flag": "🇯🇴",
+      "date": "2026-01-13T09:30:00.000Z",
+      "notes": "Hashem restaurant, downtown. Breakfast of champions.",
+      "position": {
+        "lat": 31.9516,
+        "lng": 35.9239
+      },
+      "id": 2
+    },
+    {
+      "dishName": "Pad Thai",
+      "emoji": "🍤",
+      "cityName": "Bangkok",
+      "country": "Thailand",
+      "flag": "🇹🇭",
+      "date": "2026-02-20T19:00:00.000Z",
+      "notes": "Street stall, 60 baht, best Pad Thai of my life",
+      "position": {
+        "lat": 13.7563,
+        "lng": 100.5018
+      },
+      "id": 3
+    },
+    {
+      "dishName": "Ramen",
+      "emoji": "🍜",
+      "cityName": "Tokyo",
+      "country": "Japan",
+      "flag": "🇯🇵",
+      "date": "2026-03-05T12:15:00.000Z",
+      "notes": "Ordered from a vending machine, slurping is polite here!",
+      "position": {
+        "lat": 35.6762,
+        "lng": 139.6503
+      },
+      "id": 4
+    },
+    {
+      "dishName": "Pizza Margherita",
+      "emoji": "🍕",
+      "cityName": "Naples",
+      "country": "Italy",
+      "flag": "🇮🇹",
+      "date": "2026-04-18T20:00:00.000Z",
+      "notes": "",
+      "position": {
+        "lat": 40.8518,
+        "lng": 14.2681
+      },
+      "id": 5
+    },
+    {
+      "dishName": "Tacos al pastor",
+      "emoji": "🌮",
+      "cityName": "Mexico City",
+      "country": "Mexico",
+      "flag": "🇲🇽",
+      "date": "2026-05-02T22:45:00.000Z",
+      "notes": "Pineapple on the spit. Never going back to regular tacos.",
+      "position": {
+        "lat": 19.4326,
+        "lng": -99.1332
+      },
+      "id": 6
+    },
+    {
+      "dishName": "Croissant",
+      "emoji": "🥐",
+      "cityName": "Paris",
+      "country": "France",
+      "flag": "🇫🇷",
+      "date": "2026-06-10T08:00:00.000Z",
+      "notes": "Flaky, buttery, still warm",
+      "position": {
+        "lat": 48.8566,
+        "lng": 2.3522
+      },
+      "id": 7
+    },
+    {
+      "dishName": "Paella",
+      "emoji": "🥘",
+      "cityName": "Valencia",
+      "country": "Spain",
+      "flag": "🇪🇸",
+      "date": "2026-07-21T14:30:00.000Z",
+      "notes": "The crispy bottom (socarrat) is the best part",
+      "position": {
+        "lat": 39.4699,
+        "lng": -0.3763
+      },
+      "id": 8
+    }
+  ]
+}

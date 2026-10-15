@@ -1,0 +1,48 @@
+/* Shared by About and Pricing */
+.page {
+  min-height: calc(100vh - 5rem);
+  margin: 2.5rem;
+  padding: 2.5rem 5rem;
+  border-radius: 1rem;
+  background-color: var(--color-dark--1);
+}
+
+.page section {
+  width: clamp(80rem, 80%, 90rem);
+  margin: 6rem auto;
+  display: flex;
+  gap: 7rem;
+  align-items: center;
+}
+
+.visual {
+  flex-shrink: 0;
+  width: 40%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-size: 14rem;
+  border-radius: 2rem;
+  background: radial-gradient(
+    circle,
+    rgba(255, 182, 39, 0.3),
+    var(--color-dark--2) 70%
+  );
+}
+
+.page h2 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 4.5rem;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+}
+
+.page p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: var(--color-light--3);
+}
+
+.page section a {
+  margin-top: 2rem;
+}

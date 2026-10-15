@@ -1,0 +1,61 @@
+.form {
+  background-color: var(--color-dark--2);
+  border-radius: 7px;
+  padding: 2rem 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.form.loading {
+  opacity: 0.3;
+}
+
+.form.loading button {
+  pointer-events: none;
+  background-color: var(--color-dark--1);
+  border: 1px solid var(--color-dark--1);
+  color: var(--color-dark--0);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flag {
+  position: absolute;
+  right: 1rem;
+  top: 3.5rem;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.emojis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.emojiBtn {
+  font-size: 2.2rem;
+  line-height: 1;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: var(--color-dark--1);
+  cursor: pointer;
+}
+
+.emojiBtn.selected {
+  border-color: var(--color-brand--1);
+  background-color: var(--color-dark--0);
+}

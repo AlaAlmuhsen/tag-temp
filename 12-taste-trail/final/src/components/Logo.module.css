@@ -1,0 +1,18 @@
+.link {
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Fredoka", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-light--2);
+}
+
+.logo span {
+  font-size: 3.6rem;
+  line-height: 1;
+}

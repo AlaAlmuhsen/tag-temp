@@ -1,0 +1,26 @@
+.notFound {
+  min-height: calc(100vh - 5rem);
+  margin: 2.5rem;
+  padding: 2.5rem 5rem;
+  border-radius: 1rem;
+  background-color: var(--color-dark--1);
+}
+
+.notFound section {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  text-align: center;
+}
+
+.notFound .emoji {
+  font-size: 9.6rem;
+  line-height: 1;
+}
+
+.notFound h1 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 4rem;
+}

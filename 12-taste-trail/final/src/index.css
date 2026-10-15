@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Manrope:wght@400;600;700;800&display=swap");
+
+:root {
+  --color-brand--1: #ffb627;
+  --color-brand--2: #ff6b35;
+
+  --color-dark--0: #1f1b18;
+  --color-dark--1: #2b2622;
+  --color-dark--2: #3d3631;
+  --color-light--1: #aaa39c;
+  --color-light--2: #f2ede8;
+  --color-light--3: #d6cfc8;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: var(--color-light--2);
+  background-color: var(--color-dark--0);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-light--3);
+  transition: all 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.cta:link,
+.cta:visited {
+  display: inline-block;
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--0);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+}
+
+/* Separator used by the starter design preview */
+hr {
+  border: none;
+  border-top: 2px dashed var(--color-dark--2);
+  margin: 4.8rem 0;
+}
+
+/* ---------- LEAFLET ---------- */
+/* Emoji markers (L.divIcon with className "dish-marker") */
+.dish-marker {
+  font-size: 3rem;
+  line-height: 4rem;
+  text-align: center;
+  filter: drop-shadow(0 0.4rem 0.4rem rgba(0, 0, 0, 0.4));
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: var(--color-dark--1);
+  color: var(--color-light--2);
+  border-radius: 5px;
+  padding-right: 0.6rem;
+  border-left: 5px solid var(--color-brand--2);
+}
+
+.leaflet-popup .leaflet-popup-content {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.leaflet-popup .leaflet-popup-content span:first-child {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: var(--color-dark--1);
+}
