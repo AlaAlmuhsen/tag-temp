@@ -19,7 +19,7 @@ function reducer(state, action) {
       return {
         ...state,
         pets: state.pets.map((pet) =>
-          pet.id === action.payload.id ? action.payload : pet
+          pet.id === action.payload.id ? action.payload : pet,
         ),
       };
     default:
@@ -30,7 +30,7 @@ function reducer(state, action) {
 function PetsProvider({ children }) {
   const [{ pets, isLoading, error }, dispatch] = useReducer(
     reducer,
-    initialState
+    initialState,
   );
 
   // Fetch ALL pets once. Every page reads them from here
@@ -50,9 +50,10 @@ function PetsProvider({ children }) {
     fetchPets();
   }, []);
 
-  // The id from the URL is always a STRING → convert it
-  function getPet(id) {
-    return pets.find((pet) => pet.id === Number(id));
+  async function getPet(id) {
+    const res = await fetch(`${API_URL}/pets/${id}`);
+    if (!res.ok) return null;
+    return res.json();
   }
 
   // Throws if it fails, so the form can show an error
@@ -75,9 +76,7 @@ function PetsProvider({ children }) {
   }
 
   return (
-    <PetsContext.Provider
-      value={{ pets, isLoading, error, getPet, adoptPet }}
-    >
+    <PetsContext.Provider value={{ pets, isLoading, error, getPet, adoptPet }}>
       {children}
     </PetsContext.Provider>
   );

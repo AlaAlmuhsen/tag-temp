@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+  --color-bg: #fff8ef;
+  --color-card: #ffffff;
+  --color-text: #3b2a1a;
+  --color-muted: #8a7766;
+  --color-soft: #ffe8d9;
+  --color-accent: #ff7a59;
+  --color-accent-dark: #e85d3c;
+  --color-green: #1f7a4a;
+  --color-green-soft: #d8f3e3;
+
+  --shadow: 0 0.4rem 1.6rem rgba(59, 42, 26, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Baloo 2", cursive;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+}
+
+.app {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 2.4rem 3.2rem 6rem;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4.8rem;
+}
+
+.logo {
+  font-family: "Baloo 2", cursive;
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.8rem 1.8rem;
+  border-radius: 100px;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  background-color: var(--color-soft);
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+}
+
+.nav-user .avatar {
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+/* NavLink adds the "active" class to the link of the current page */
+.nav-links a.active {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid var(--color-accent);
+  border-radius: 100px;
+  padding: 1rem 2.6rem;
+  cursor: pointer;
+  background-color: var(--color-accent);
+  color: #fff;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.btn-small {
+  padding: 0.4rem 1.6rem;
+  font-size: 1.4rem;
+}
+
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- HOME ---------- */
+.home {
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.home .hero-emoji {
+  font-size: 8rem;
+  line-height: 1;
+  letter-spacing: 1rem;
+  margin-bottom: 2.4rem;
+}
+
+.home h1 {
+  font-size: 5.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.home p {
+  font-size: 2rem;
+  color: var(--color-muted);
+  max-width: 56rem;
+  margin: 0 auto 3.2rem;
+}
+
+.home .actions {
+  justify-content: center;
+}
+
+/* ---------- ABOUT ---------- */
+.about {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.about h1 {
+  font-size: 4.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.about p {
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.about ul {
+  list-style: none;
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+}
+
+.about li {
+  background-color: var(--color-card);
+  padding: 1.6rem 2rem;
+  border-radius: 1.6rem;
+  box-shadow: var(--shadow);
+  font-weight: 600;
+}
+
+/* ---------- PETS LAYOUT ---------- */
+.pets-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.2rem;
+}
+
+.pets-header h1 {
+  font-size: 4.4rem;
+}
+
+.pets-header p {
+  color: var(--color-muted);
+}
+
+/* ---------- FILTER BAR ---------- */
+.filter-bar {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.4rem;
+}
+
+.filter-bar button {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  padding: 0.6rem 1.6rem;
+  border-radius: 100px;
+  border: 2px solid var(--color-soft);
+  background-color: var(--color-card);
+  cursor: pointer;
+}
+
+.filter-bar button.selected {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+/* ---------- PET LIST ---------- */
+.pet-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  gap: 2.4rem;
+}
+
+.pet-card {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--color-card);
+  border-radius: 2.4rem;
+  padding: 2.4rem;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
+}
+
+.pet-card:hover {
+  transform: translateY(-0.6rem);
+  box-shadow: 0 1.2rem 2.4rem rgba(59, 42, 26, 0.15);
+}
+
+.pet-card .emoji {
+  font-size: 5.6rem;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto 1.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--color-soft);
+}
+
+.pet-card h3 {
+  font-size: 2.4rem;
+}
+
+.pet-card p {
+  font-size: 1.4rem;
+  color: var(--color-muted);
+}
+
+.pet-card.adopted {
+  opacity: 0.7;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.2rem 1.2rem;
+  border-radius: 100px;
+  background-color: var(--color-green-soft);
+  color: var(--color-green);
+}
+
+/* ---------- LOADER + MESSAGE ---------- */
+.loader {
+  text-align: center;
+  padding: 6rem 0;
+  font-size: 1.8rem;
+  color: var(--color-muted);
+}
+
+.loader span {
+  display: inline-block;
+  font-size: 4.8rem;
+  animation: bounce 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-1.6rem);
+  }
+}
+
+.message {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--color-muted);
+  padding: 4rem;
+}
+
+.message p {
+  margin-bottom: 2rem;
+}
+
+/* ---------- PET DETAILS ---------- */
+.pet-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4rem;
+  align-items: start;
+  background-color: var(--color-card);
+  border-radius: 3.2rem;
+  padding: 4rem;
+  box-shadow: var(--shadow);
+}
+
+.pet-details .emoji {
+  font-size: 11rem;
+  width: 20rem;
+  height: 20rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--color-soft);
+}
+
+.pet-details h2 {
+  font-size: 4.4rem;
+}
+
+.pet-details .meta {
+  color: var(--color-muted);
+  margin-bottom: 1.6rem;
+}
+
+.pet-details .description {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.traits {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.traits li {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.4rem 1.4rem;
+  border-radius: 100px;
+  background-color: var(--color-soft);
+}
+
+.adopted-note {
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  background-color: var(--color-green-soft);
+  color: var(--color-green);
+}
+
+/* ---------- ADOPTIONS ---------- */
+.adoptions h1 {
+  font-size: 4.4rem;
+}
+
+.adoptions > p {
+  color: var(--color-muted);
+  margin-bottom: 3.2rem;
+}
+
+.adoption-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.adoption {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  text-decoration: none;
+  background-color: var(--color-card);
+  border-radius: 2.4rem;
+  padding: 2rem 2.4rem;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
+}
+
+.adoption:hover {
+  transform: translateX(0.6rem);
+}
+
+.adoption .emoji {
+  flex-shrink: 0;
+  font-size: 4rem;
+  width: 7.2rem;
+  height: 7.2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--color-soft);
+}
+
+.adoption h3 {
+  font-size: 2.4rem;
+}
+
+.adoption .meta {
+  font-size: 1.4rem;
+  color: var(--color-muted);
+}
+
+.adoption .reason {
+  font-style: italic;
+  margin-top: 0.4rem;
+}
+
+/* ---------- ADOPT FORM ---------- */
+.adopt-form {
+  max-width: 52rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--color-card);
+  border-radius: 3.2rem;
+  padding: 4rem;
+  box-shadow: var(--shadow);
+}
+
+.adopt-form h2 {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.form-row label {
+  font-weight: 700;
+}
+
+.form-hint {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--color-muted);
+}
+
+.form-error {
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-accent-dark);
+}
+
+.form-row input,
+.form-row textarea {
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: var(--color-text);
+  padding: 1rem 1.4rem;
+  border: 2px solid var(--color-soft);
+  border-radius: 1.2rem;
+  background-color: var(--color-bg);
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* ---------- THANK YOU + NOT FOUND ---------- */
+.message-page {
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.message-page .big-emoji {
+  font-size: 9.6rem;
+  line-height: 1;
+  margin-bottom: 2.4rem;
+}
+
+.message-page h1 {
+  font-size: 4.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.message-page p {
+  font-size: 2rem;
+  color: var(--color-muted);
+  margin-bottom: 3.2rem;
+}
+
+.message-page .actions {
+  justify-content: center;
+}
+
+/* Separator used by the starter design preview */
+hr {
+  border: none;
+  border-top: 3px dashed var(--color-accent);
+  margin: 6rem 0;
+}

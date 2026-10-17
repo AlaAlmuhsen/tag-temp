@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { usePets } from "../contexts/PetsContext";
 import { useAuth } from "../contexts/AuthContext";
@@ -13,10 +13,28 @@ function AdoptForm() {
 
   const [reason, setReason] = useState("");
   const [isSending, setIsSending] = useState(false);
+  const [pet, setPet] = useState(null);
+  const [isPetLoading, setIsPetLoading] = useState(true);
 
-  if (isLoading) return <Loader />;
+  useEffect(() => {
+    let isCurrent = true;
 
-  const pet = getPet(petId);
+    async function fetchPet() {
+      setIsPetLoading(true);
+      const fetchedPet = await getPet(petId);
+      if (isCurrent) {
+        setPet(fetchedPet);
+        setIsPetLoading(false);
+      }
+    }
+
+    fetchPet();
+    return () => {
+      isCurrent = false;
+    };
+  }, [getPet, petId]);
+
+  if (isLoading || isPetLoading) return <Loader />;
 
   if (!pet) return <Navigate to="/pets" replace />;
 

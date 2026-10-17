@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { usePets } from "../contexts/PetsContext";
 import { useAuth } from "../contexts/AuthContext";
@@ -9,10 +10,28 @@ function PetDetails() {
   const { petId } = useParams();
   const { getPet, isLoading } = usePets();
   const { user } = useAuth();
+  const [pet, setPet] = useState(null);
+  const [isPetLoading, setIsPetLoading] = useState(true);
 
-  if (isLoading) return <Loader />;
+  useEffect(() => {
+    let isCurrent = true;
 
-  const pet = getPet(petId);
+    async function fetchPet() {
+      setIsPetLoading(true);
+      const fetchedPet = await getPet(petId);
+      if (isCurrent) {
+        setPet(fetchedPet);
+        setIsPetLoading(false);
+      }
+    }
+
+    fetchPet();
+    return () => {
+      isCurrent = false;
+    };
+  }, [getPet, petId]);
+
+  if (isLoading || isPetLoading) return <Loader />;
 
   // /pets/999 → this pet doesn't exist → redirect
   if (!pet) return <Navigate to="/pets" replace />;
