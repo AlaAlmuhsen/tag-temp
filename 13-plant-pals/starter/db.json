@@ -1,0 +1,49 @@
+{
+  "plants": [
+    {
+      "id": 1,
+      "name": "Monty the Monstera",
+      "emoji": "🌿",
+      "room": "Living room",
+      "waterEvery": 7,
+      "lastWatered": "2026-10-12T09:00:00.000Z",
+      "notes": "Loves bright, indirect light. Wipe the big leaves once a month."
+    },
+    {
+      "id": 2,
+      "name": "Spike",
+      "emoji": "🌵",
+      "room": "Bedroom",
+      "waterEvery": 21,
+      "lastWatered": "2026-10-01T09:00:00.000Z",
+      "notes": "Basically immortal. Too much water is the only way to hurt it."
+    },
+    {
+      "id": 3,
+      "name": "Basil Brush",
+      "emoji": "🌱",
+      "room": "Kitchen",
+      "waterEvery": 2,
+      "lastWatered": "2026-10-13T09:00:00.000Z",
+      "notes": "Pinch the top leaves so it grows bushy. Great on pizza."
+    },
+    {
+      "id": 4,
+      "name": "Fernando",
+      "emoji": "🪴",
+      "room": "Bathroom",
+      "waterEvery": 4,
+      "lastWatered": "2026-10-15T09:00:00.000Z",
+      "notes": "Likes the steam from the shower. Keep the soil a little moist."
+    },
+    {
+      "id": 5,
+      "name": "Sunny",
+      "emoji": "🌻",
+      "room": "Balcony",
+      "waterEvery": 3,
+      "lastWatered": "2026-10-09T09:00:00.000Z",
+      "notes": "Turns to follow the sun. Needs at least 6 hours of light."
+    }
+  ]
+}
